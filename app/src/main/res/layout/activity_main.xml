@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constraint">
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_menu_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="50dp"
+            android:text="MP3 Player"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card1"
+            style="@style/Widget.Material3.MaterialTimePicker.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/song_image" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card2"
+            style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/card1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card1"
+            app:strokeColor="@color/black"
+
+            >
+            <TextView
+                android:layout_width="394dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Dosti Music Video"
+                android:textSize="30dp" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/shuffle"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginVertical="110dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_baseline_shuffle_24"
+            app:maxImageSize="40dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/pvr"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginVertical="110dp"
+            android:layout_marginStart="95dp"
+            android:src="@drawable/ic_baseline_skip_previous_24"
+            android:tint="@color/white"
+            app:maxImageSize="40dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/start"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="100dp"
+            android:layout_marginStart="175dp"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            android:tint="@color/white"
+            app:maxImageSize="70dp"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/next"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginVertical="110dp"
+            android:layout_marginStart="270dp"
+            android:src="@drawable/ic_baseline_skip_next_24"
+            android:tint="@color/white"
+            app:maxImageSize="40dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/stop"
+            android:layout_width="79dp"
+            android:layout_height="50dp"
+            android:layout_marginVertical="110dp"
+            android:layout_marginStart="340dp"
+            android:src="@drawable/ic_baseline_stop_24"
+            android:tint="@color/white"
+
+            />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
