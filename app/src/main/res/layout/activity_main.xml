@@ -10,6 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/constraint">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:id="@+id/top_tool"
+            app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/menu"
@@ -33,6 +39,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card1"
             style="@style/Widget.Material3.MaterialTimePicker.ImageButton"
@@ -41,7 +50,7 @@
             app:cardCornerRadius="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text">
+            app:layout_constraintTop_toBottomOf="@+id/top_tool">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -61,9 +70,10 @@
             app:layout_constraintTop_toBottomOf="@+id/card1"
             app:strokeColor="@color/black"
 
+
             >
             <TextView
-                android:layout_width="394dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="Dosti Music Video"
@@ -72,7 +82,7 @@
             <com.google.android.material.slider.RangeSlider
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50sp"
+                android:layout_marginTop="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -80,54 +90,54 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/shuffle"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginVertical="110dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="40dp"
             android:src="@drawable/ic_baseline_shuffle_24"
-            app:maxImageSize="40dp" />
+            app:fabSize="mini" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/pvr"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginVertical="110dp"
-            android:layout_marginStart="95dp"
+            android:layout_marginStart="105dp"
             android:src="@drawable/ic_baseline_skip_previous_24"
             android:tint="@color/white"
-            app:maxImageSize="40dp" />
+            app:fabSize="mini" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/start"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="70dp"
-            android:layout_marginVertical="100dp"
+            android:layout_marginVertical="110dp"
             android:layout_marginStart="175dp"
             android:src="@drawable/ic_baseline_play_arrow_24"
             android:tint="@color/white"
-            app:maxImageSize="70dp"
-            />
+            app:fabSize="mini" />
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/next"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginVertical="110dp"
-            android:layout_marginStart="270dp"
+            android:layout_marginStart="250dp"
             android:src="@drawable/ic_baseline_skip_next_24"
             android:tint="@color/white"
-            app:maxImageSize="40dp" />
+            app:fabSize="mini" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/stop"
-            android:layout_width="79dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginVertical="110dp"
-            android:layout_marginStart="340dp"
+            android:layout_marginStart="320dp"
             android:src="@drawable/ic_baseline_stop_24"
             android:tint="@color/white"
+            app:fabSize="mini" />
 
-            />
         </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
